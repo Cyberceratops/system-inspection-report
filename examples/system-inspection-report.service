@@ -1,0 +1,10 @@
+[Unit]
+Description=Daily system inspection report
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+EnvironmentFile=-/etc/system-inspection-report.env
+WorkingDirectory=/opt/system-inspection-report
+ExecStart=/usr/bin/env bash /opt/system-inspection-report/scripts/system_inspection_report.sh root

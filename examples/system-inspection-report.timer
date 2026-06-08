@@ -1,0 +1,11 @@
+[Unit]
+Description=Run daily system inspection report
+
+[Timer]
+OnCalendar=*-*-* 09:00:00
+Persistent=true
+RandomizedDelaySec=5min
+Unit=system-inspection-report.service
+
+[Install]
+WantedBy=timers.target

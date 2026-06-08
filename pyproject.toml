@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "system-inspection-report"
+version = "0.1.0"
+description = "Generate daily Linux system inspection reports with optional email and Telegram delivery."
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+authors = [{ name = "System Inspection Report contributors" }]
+
+[project.scripts]
+system-inspection-report = "system_inspection_report.main:main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+system_inspection_report = ["templates/*.html"]

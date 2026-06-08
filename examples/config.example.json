@@ -1,0 +1,24 @@
+{
+  "report_tz": "Asia/Shanghai",
+  "report_dir": "/var/log/system-inspection-reports",
+  "security_alert_dir": "/var/log/security-alerts",
+  "root_disk_path": "/",
+  "data_disk_path": "/var/lib",
+  "data_root": "/var/lib",
+  "network_interface": "",
+  "recipient": "root",
+  "send_email": "0",
+  "send_telegram": "0",
+  "delivery_mode": "best-effort",
+  "log_paths": [
+    ["System logs", "/var/log"],
+    ["Docker container logs", "/var/lib/docker/containers"],
+    ["Application logs", "/var/log/myapp"]
+  ],
+  "timer_units": [
+    "system-inspection-report.timer",
+    "sysstat-collect.timer",
+    "sysstat-summary.timer",
+    "vnstat.service"
+  ]
+}
