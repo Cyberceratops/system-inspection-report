@@ -11,3 +11,5 @@ inspection-*.summary.txt
 .mypy_cache/
 .venv/
 *.egg-info/
+build/
+dist/

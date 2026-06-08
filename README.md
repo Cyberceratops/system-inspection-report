@@ -29,7 +29,8 @@ git clone https://github.com/Cyberceratops/system-inspection-report.git
 cd system-inspection-report
 python3 -m venv .venv
 . .venv/bin/activate
-pip install -e .
+# 安装当前仓库里的 Python 包，安装后会得到 system-inspection-report 命令
+python3 -m pip install .
 SEND_EMAIL=0 SEND_TELEGRAM=0 REPORT_DIR=reports system-inspection-report root
 ```
 
